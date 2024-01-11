@@ -2,6 +2,8 @@ package com.example.appoftheday
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
+import androidx.core.content.ContextCompat
 import com.example.appoftheday.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +19,10 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.buttonSetImage.setOnClickListener {
-            binding.textTitle.text = "App of the day"
+            binding.textTitle.text = "Image set Successfully"
+
+            val drawable = ContextCompat.getDrawable(this, R.drawable.test2)
+            binding.imageDownloaded.setImageDrawable(drawable)
         }
     }
 }
