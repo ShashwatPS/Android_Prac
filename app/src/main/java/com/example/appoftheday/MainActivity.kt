@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.buttonSetImage.setOnClickListener {
-            binding.textTitle.text = "Image set Successfully"
+            binding.textTitle.text = "App of the Day"
 
             val drawable = ContextCompat.getDrawable(this, R.drawable.test2)
             binding.imageDownloaded.setImageDrawable(drawable)
