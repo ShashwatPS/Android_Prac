@@ -13,7 +13,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
         binding.textTitle.text = "App of tomorrow"
+
+
+        binding.buttonSetImage.setOnClickListener {
+            binding.textTitle.text = "App of the day"
+        }
     }
 }
